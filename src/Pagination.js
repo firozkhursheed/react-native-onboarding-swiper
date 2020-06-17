@@ -26,9 +26,9 @@ const Pagination = ({
   DotComponent,
 }) => {
   const isLastPage = currentPage + 1 === numPages;
+  const isFirstPage = currentPage === 0
 
-  const SkipButtonFinal = showSkip &&
-    !isLastPage && (
+  const SkipButtonFinal = showSkip && !isFirstPage && (
       <SkipButtonComponent
         isLight={isLight}
         skipLabel={skipLabel}
